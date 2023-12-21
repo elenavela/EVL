@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="claro">
+    <!--METAINFORMACIÓN DE LA PÁGINA WEB-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="name" content="Elena Vela Portfolio">
+        <meta name="description" content="Algunos componentes css básico para poder empezar a hacer nuestras webs.">
+
+        <title>Elena Vela</title>
+        <link rel="icon" href="images/logosinfondo.png">
+        <link rel="stylesheet" href="estilos/estilosecciones.css">
+    </head>
+
+    <!--CONTENIDO DE LA PÁGINA WEB-->
+    <body>
+        <!--BARRA DE NAVEGACIÓN-->
+        <nav>
+            <a class="enlace-nav" href="index.html">
+                <img class="logoInicio" id="icono" src="images/logosinfondo.png" alt="" width="90px" height="90px">
+            </a>
+            <br>
+            
+            <ul class="lista-nav">
+                <li><button onclick="modoOscuro()">Modo Oscuro</button></li>
+                <li><a class="enlace-nav" href="index.html">Inicio</a></li>
+                <li><a class="enlace-nav" href="Sobre_mi.html">Sobre mí</a></li>
+                <li><a class="enlace-nav" href="proyectos.html">Proyectos</a></li>
+                <li><a class="enlace-nav" href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <!--MENÚ DESPLEGABLE PARA MÓVIL-->
+            <div class="desplegable">
+                <p class="menu">Menú</p>
+                <div class="desplegable-contenido">
+                    <a href="index.html"><p>Inicio</p></a>
+                    <a href="Sobre_mi.html"><p>Sobre mí</p></a>
+                    <a href="proyectos.html"><p>Proyectos</p></a>
+                    <a href="contacto.html"><p>Contacto</p></a>
+                </div>
+            </div>
+        </nav>
+
+        <!--CABECERA-->
+        <header>
+            <h1>Elena Vela</h1>
+        </header>
+
+        <!--CONTENIDO PRINCIPAL-->
+        <main>
+            <img class="imagenPortada" alt src="images/duotone (2) - copia.png">
+
+            <h3>Diseñadora de servicios 
+                Comisaria de exposiciones</h3>
+            
+            <p>Pensando en el usuario 
+                    y diseñando con él </p>
+            
+                
+            <h2>Proyectos</h2>
+            <section class="galeríaProyectos">
+                <div> 
+                    <a href="diseño.html"><h4>Diseño</h4>
+                    <img src="images/Diseño.png" height="300px" width="200px"></a>
+                </div>
+                <div>
+                    <a href="expos.html"><h4>Exposiciones</h4>
+                    <img src="images/expos.jpg" height="300px" width="225px"></a>
+                </div>
+                <div>
+                    <a href="fotografia.html"><h4>Fotografía</h4>
+                    <img src="images/fotog4.jpeg" height="300px" width="225px"></a>
+                </div>
+                <div>
+                     <a href="grafico.html"><h4>Gráfico</h4>
+                     <img src="images/gráfico2.png" height="300px" width="225px"></a>
+                </div>
+            </section>
+                
+
+            
+        </main>
+
+        <!--PIE DE PÁGINA-->
+        <footer>
+            <p> Copyright &COPY; Elena Vela 2023</p>
+        </footer>
+
+        <script src="tema.js"></script>
+    </body>
+</html>

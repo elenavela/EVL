@@ -1,0 +1,297 @@
+/* region GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+[data-theme="claro"] {
+    --color-principal: #eccdd2;
+    --color-secundario: #c23971;
+    --color-terciario: rgb(246, 106, 162);
+    --color-extra: rgb(148, 2, 70);
+}
+
+[data-theme="oscuro"] {
+    --color-principal: #c23971;
+    --color-secundario: #eccdd2;
+    --color-terciario: rgb(247, 148, 188);
+    --color-extra: #eccdd2;
+}
+
+body {
+    background-color: var(--color-principal);
+    color: var(--color-secundario) ;
+}
+/* endregion */
+
+/* region BARRA DE NAVEGACIÓN */
+nav {
+    background-color: var(--color-principal);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista-nav {
+    display: flex;
+    list-style: none;
+    padding-right: 20px;
+}
+
+button {
+    color: var(--color-secundario);
+    background-color: var(--color-principal);
+    border: none;
+    box-shadow: none;
+    padding: 3px 10px 3px 10px;
+}
+
+.enlace-nav {
+    color: var(--color-secundario);
+    padding: 5px 7px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.enlace-nav:hover {
+    text-decoration: underline;
+}
+
+.desplegable {
+    color: var(--color-secundario);
+    padding-right: 25px;
+    text-transform: uppercase;
+    display: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.desplegable-contenido {
+    display: none;
+    position: absolute;
+    right: 25px;
+    text-transform: capitalize;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    box-shadow: 0px 4px 16px 0px var(--color-extra);
+    min-width: 160px;
+    margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.desplegable-contenido p {
+    padding: 15px 0px;
+    padding-left: 5px;
+}
+/* endregion */
+
+/* region CABECERA */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: titulo;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    margin: 0px 50px;
+    padding: 20px 0px;
+}
+
+.imagenPortada {
+    width: 90vw;
+
+}
+/* endregion */
+
+/* region PRINCIPAL */
+main {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 100px;
+}
+
+p {
+    box-sizing: border-box;
+    padding: 0px 50px;
+}
+
+section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center; 
+    margin-left: 0px;
+    padding: 0px 50px;
+}
+
+h2 {
+    padding: 60px 0px 40px;
+    display: inline-block;
+}
+
+h3 {
+    padding: 20px;
+}
+
+h4 {
+    font-size: larger;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.sobreMi {
+    align-items:start;
+    text-align: left;
+    justify-content: center;
+    width: 80vw;
+}
+
+.textoSobremi {
+    padding: 0%;
+}
+
+.cajaTextosobremi {
+    width: 400px;
+}
+
+div {
+    padding: 20px;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.botonesCarrusel {
+    padding: 10px;
+}
+
+/* SOLAMENTE SE APLICA EN MÓVIL */
+@media only screen and (max-width: 600px) {
+    li .enlace-nav {
+        display: none;
+    }
+
+    .desplegable {
+        display: inline-block;
+        padding: 0%;
+    }
+
+    .desplegable:hover .desplegable-contenido {
+        display: inline-block;
+    }
+
+    .menu {
+        padding: 30px;
+    }
+
+    header {
+        padding: 0%;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    h1 {        
+        font-size:x-large;
+    }
+
+    h2 {        
+        font-size: medium;
+        padding: 20px 0px 10px;
+    }
+
+    h3 {        
+        font-size: large;
+    }
+    h4 { font-size: smaller;}
+
+    main {
+        padding: 10px;
+        min-height: 78vh;
+    }
+
+    iframe {
+        width: 400px;
+        height: 80vh;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .imagenPortada {
+        width:90vw;
+
+    }
+
+    .imagenYo {
+        width: 300px;
+        height: 400px;
+    }
+
+    .sobreMi {
+        align-items:center ;
+        width: auto;
+    }
+
+    .textoSobremi {
+        padding: 0%;
+        text-align: justify;
+    }
+
+    .cajaTextosobremi {
+        width: 300px;
+    }
+
+    .logoInicio {
+        width: 50px;
+        height: 50px;
+    }
+
+    .galeriaProyectos {
+        flex-direction: column;
+    }
+
+    .carrusel {
+        padding: 10px;
+    }
+}
+/* endregion */
+
+/* region PIE DE PÁGINA */
+footer {
+    background-image: linear-gradient( to top, var(--color-secundario), var(--color-principal));    
+    color: var(--color-principal);
+    text-align: center;
+    padding: 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+/* endregion */
+
+@keyframes titulo {
+    0% {
+        color: var(--color-secundario);
+    }
+    25% {
+        color: var(--color-terciario);}
+    50% {
+        color: var(--color-secundario);
+    }
+    75% {
+        color: var(--color-terciario);}
+    /* Final de la animación */
+    100% {
+        color: var(--color-secundario);
+    }
+
+}
